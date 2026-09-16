@@ -1,0 +1,12 @@
+---
+interface TocItem { id: string; text: string; level: 2 | 3; }
+const { items = [] } = Astro.props as { items: TocItem[] };
+---
+{items.length > 0 && (
+  <nav class="sticky top-24 hidden w-56 shrink-0 self-start lg:block" aria-label="Table of contents">
+    <h2 class="mb-3 text-xs font-bold uppercase tracking-wider text-muted">On this page</h2>
+    <ul class="grid list-none gap-2 border-l-2 border-border pl-4 text-sm text-muted">
+      {items.map((item) => <li class={item.level === 3 ? 'pl-3' : ''}><a class="hover:text-primary" href={`#${item.id}`}>{item.text}</a></li>)}
+    </ul>
+  </nav>
+)}

@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../data/site.json';
+---
+<BaseLayout title={`Page Not Found | ${site.siteName}`} description="The requested guide page could not be found." noindex={true}>
+  <section class="prose-shell py-24 text-center">
+    <p class="eyebrow">404</p>
+    <h1 class="mt-4 font-display text-5xl font-bold">This guide is not here</h1>
+    <p class="mt-4 text-muted">It may be unpublished because its answer has not been verified yet.</p>
+    <a class="btn-primary mt-8" href="/guides/">Browse published guides</a>
+  </section>
+</BaseLayout>

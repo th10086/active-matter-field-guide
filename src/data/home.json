@@ -1,0 +1,61 @@
+{
+  "title": "Active Matter Field Guide — Raids, Maps and Anomalies",
+  "description": "Source-checked Active Matter guides covering extraction raids, PvE and PvP modes, locations, anomalies and official game information.",
+  "hero": {
+    "eyebrow": "Active Matter · unofficial field guide",
+    "headingPre": "Extract",
+    "headingHighlight": "what you can",
+    "headingPost": "before the zone collapses",
+    "description": "Practical, source-checked help for raids, maps, anomalies and the systems that keep you alive.",
+    "primaryCta": { "label": "Start with the beginner guide", "href": "/beginner-guide/" },
+    "secondaryCta": { "label": "Browse maps", "href": "/maps-overview/" },
+    "disclaimer": "Independent guide site · Not affiliated with Matter Team, Gaijin or Steam",
+    "image": { "src": "/media/game-active-matter-header-01.webp", "alt": "Active Matter official promotional key art", "caption": "Official Steam promotional artwork. © Matter Team and Gaijin Network Ltd." },
+    "statusNote": "Facts checked September 16, 2026. Version-sensitive notes name the patch they were checked against."
+  },
+  "video": {
+    "eyebrow": "Official video",
+    "title": "See the extraction loop before you queue",
+    "description": "The official release trailer introduces Active Matter without requiring an external video page.",
+    "videoId": "rg33e6j3jc8",
+    "videoTitle": "Active Matter — Release Trailer"
+  },
+  "guideCards": [
+    { "label": "Beginner", "title": "Your first raid", "text": "Understand the extraction loop, preparation and what the official sources actually confirm.", "href": "/beginner-guide/" },
+    { "label": "Modes", "title": "PvE, Open and Isolated", "text": "Choose a mode with a clear explanation of what changes and what does not.", "href": "/raid-modes/" },
+    { "label": "Maps", "title": "Park location guide", "text": "A verified overview of the overgrown Dalniy Island location and its named threats.", "href": "/park/" },
+    { "label": "Systems", "title": "Harmonization and progression", "text": "A version-labelled explanation of the global progression system.", "href": "/harmonization/" }
+  ],
+  "compare": {
+    "eyebrow": "Build-aware answers",
+    "title": "Every volatile fact carries its version",
+    "description": "We separate confirmed official information from details that still need launch-build verification.",
+    "link": { "label": "Read the source policy", "href": "/sources/" }
+  },
+  "stats": {
+    "title": "Verified game facts",
+    "items": [
+      { "label": "Developer & publisher", "value": "Matter Team · Gaijin Network Ltd" },
+      { "label": "Steam platforms", "value": "Windows and Linux" },
+      { "label": "Modes", "value": "Extraction · PvE · PvP" },
+      { "label": "Languages on Steam", "value": "7 listed · 4 with full audio" }
+    ],
+    "note": "US Steam Standard price was USD 29.99 when checked on September 16, 2026. See the official store for the live amount."
+  },
+  "screenshots": {
+    "eyebrow": "Confirmed locations",
+    "title": "From Park to Downtown",
+    "description": "A small, credited selection of official scenes and update art. Theme scenes are labelled honestly when object mapping is not confirmed.",
+    "items": [
+      { "src": "/media/region-park-01.webp", "alt": "Park entrance sign in an overgrown zone", "caption": "Park — location mapping confirmed by the visible sign." },
+      { "src": "/media/update-250-shades-01.webp", "alt": "Official 250 Shades of Liberty update artwork", "caption": "Downtown context from the official 250 Shades of Liberty update." },
+      { "src": "/media/update-gigastructure-park-01.webp", "alt": "Official Gigastructure update artwork", "caption": "Gigastructure update art; section mapping confirmed." }
+    ],
+    "credit": "Official Steam and Active Matter news assets. Copyright remains with their respective owners."
+  },
+  "bottomCta": {
+    "title": "Not every popular question is ready for publication",
+    "text": "Weapon rankings, exact loot routes and economy values stay off the site until the launch build and a reliable source support them.",
+    "button": { "label": "See what is verified", "href": "/sources/" }
+  }
+}

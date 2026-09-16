@@ -1,0 +1,13 @@
+---
+import TrustPage from '../components/TrustPage.astro';
+import site from '../data/site.json';
+---
+<TrustPage title="About" description={`How ${site.siteName} researches, verifies and publishes game help.`}>
+  <h2>What this site is</h2>
+  <p>{site.siteName} is an English-first reference for players looking for walkthrough steps, guides and verified game information. It is an independent guide project, not an official wiki.</p>
+  <h2>Editorial standard</h2>
+  <p>Every published solution must point to identifiable evidence. Official store pages and developer announcements establish game facts. Guide steps are compared across written guides and recorded playthroughs before publication.</p>
+  <p>Reddit posts, discussion threads and comments can reveal where players are stuck, but they do not become an answer merely because someone posted them.</p>
+  <h2>Corrections</h2>
+  <p>Game updates can change behavior. Each guide includes a verification date and version note so readers can judge whether a later patch may have affected it.</p>
+</TrustPage>

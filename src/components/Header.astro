@@ -1,0 +1,67 @@
+---
+import site from '../data/site.json';
+const nav = site.nav;
+---
+
+<header class="sticky top-0 z-50 border-b border-border bg-bg/90 backdrop-blur-xl">
+  <div class="shell-wide flex min-h-[72px] min-w-0 items-center justify-between gap-3">
+    <a href="/" class="flex min-w-0 flex-1 items-center gap-2.5 no-underline">
+      <span class="grid size-10 shrink-0 place-items-center rounded-xl bg-primary font-bold text-white" aria-hidden="true">{site.logoMark}</span>
+      <span class="min-w-0">
+        <span class="block truncate font-display text-sm font-bold sm:text-lg"><span class="sm:hidden">{site.shortName}</span><span class="hidden sm:inline">{site.siteName}</span></span>
+        <span class="block text-[.68rem] font-bold uppercase tracking-[.16em] text-muted">Unofficial guide</span>
+      </span>
+    </a>
+
+    <!-- 桌面导航：一级 + hover 下拉 -->
+    <nav aria-label="Primary navigation" class="hidden items-center gap-5 md:flex">
+      {nav.map((item) => (
+        item.children ? (
+          <div class="group relative">
+            <button class="flex cursor-pointer items-center gap-1 text-sm font-semibold text-muted no-underline hover:text-primary" type="button">
+              {item.label}
+              <svg class="size-3.5 opacity-60" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" /></svg>
+            </button>
+            <div class="invisible absolute left-1/2 top-full -translate-x-1/2 pt-2 opacity-0 transition group-hover:visible group-hover:opacity-100">
+              <div class="grid w-56 gap-1 rounded-xl border border-border bg-surface p-2 shadow-xl">
+                {item.children.map((c) => (
+                  <a class="rounded-lg px-3 py-2 text-sm font-semibold no-underline hover:bg-surface-soft" href={c.href}>{c.label}</a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <a class="text-sm font-semibold text-muted no-underline hover:text-primary" href={item.href}>{item.label}</a>
+        )
+      ))}
+    </nav>
+
+    <div class="flex shrink-0 items-center gap-2">
+      <button data-theme-toggle class="grid size-10 place-items-center rounded-lg border border-border bg-surface text-lg" type="button" aria-label="Toggle color theme">◐</button>
+
+      <!-- 移动导航：汉堡 + 手风琴 -->
+      <details class="relative md:hidden">
+        <summary class="grid size-10 cursor-pointer list-none place-items-center rounded-lg border border-border bg-surface" aria-label="Open navigation">☰</summary>
+        <nav class="absolute right-0 top-12 grid max-h-[70vh] w-64 gap-1 overflow-y-auto rounded-xl border border-border bg-surface p-2 shadow-xl" aria-label="Mobile navigation">
+          {nav.map((item) => (
+            item.children ? (
+              <details>
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm font-semibold no-underline hover:bg-surface-soft">
+                  {item.label}
+                  <svg class="size-3.5 shrink-0 opacity-60" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" /></svg>
+                </summary>
+                <div class="mb-1 ml-3 grid gap-1 border-l border-border pl-3">
+                  {item.children.map((c) => (
+                    <a class="rounded-lg px-3 py-1.5 text-sm no-underline hover:bg-surface-soft" href={c.href}>{c.label}</a>
+                  ))}
+                </div>
+              </details>
+            ) : (
+              <a class="rounded-lg px-3 py-2 text-sm font-semibold no-underline hover:bg-surface-soft" href={item.href}>{item.label}</a>
+            )
+          ))}
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

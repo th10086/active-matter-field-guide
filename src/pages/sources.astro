@@ -1,0 +1,27 @@
+---
+import TrustPage from '../components/TrustPage.astro';
+import site from '../data/site.json';
+---
+<TrustPage title="Sources and Image Credits" description={`Official references, walkthrough evidence and image-use records for ${site.siteName}.`}>
+  <h2>Primary official sources</h2>
+  <ul>
+    <li><a href={site.officialUrl}>Official {site.gameName} website</a></li>
+    <li><a href={site.steamUrl}>Steam store page</a></li>
+    <li><a href={site.communityUrl}>Steam Community</a></li>
+    <li><a href={`${site.communityUrl}allnews/`}>Steam news and patch posts</a></li>
+  </ul>
+  <h2>Guide verification sources</h2>
+  <p>Published guides use the official pages above for product facts. Observable gameplay claims are labelled with a version note and are not presented as verified when the launch build has not been captured.</p>
+  <h2>Image credits</h2>
+  <p>The site uses a limited set of official screenshots published on the <a href={site.steamUrl}>{site.gameName} Steam store page</a>. The images are credited to {site.developer} and are used to identify and discuss the game. No official logos or community artwork are used.</p>
+  <ul>
+    <li><code>game-active-matter-header-01.webp</code> — official Steam promotional artwork.</li>
+    <li><code>region-park-01.webp</code> — official Steam scene with the Park sign visible.</li>
+    <li><code>update-250-shades-01.webp</code> — official 250 Shades of Liberty update art.</li>
+  </ul>
+  <p>The files were resized and converted to WebP for page performance; their content was not altered. The favicon and interface graphics are original site elements.</p>
+  <h2>Official video embeds</h2>
+  <p>The homepage embeds the Active Matter release trailer published by the official Active Matter channel. The player loads only after a visitor clicks the thumbnail.</p>
+  <h2>Source classification</h2>
+  <p>Official pages support release, platform and product facts. Recorded playthroughs support observable gameplay sequences. Community discussions are used to discover player questions, not as sole proof of an answer.</p>
+</TrustPage>

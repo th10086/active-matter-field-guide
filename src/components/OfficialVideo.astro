@@ -1,0 +1,22 @@
+---
+import site from '../data/site.json';
+interface Props {
+  videoId: string;
+  title: string;
+  caption?: string;
+}
+const { videoId, title, caption = `Official video published by ${site.developer} on YouTube.` } = Astro.props;
+---
+<figure class="my-8">
+  <div class="video-frame">
+    <iframe
+      src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
+      title={title}
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <figcaption class="mt-2 text-xs text-muted">{caption} <a class="font-bold text-primary" href={`https://www.youtube.com/watch?v=${videoId}`} target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption>
+</figure>

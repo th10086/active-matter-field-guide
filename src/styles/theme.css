@@ -1,0 +1,100 @@
+@font-face { font-family: 'Inter'; src: url('/fonts/inter-400.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fonts/inter-500.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fonts/inter-600.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fonts/inter-700.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Outfit'; src: url('/fonts/outfit-500.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Outfit'; src: url('/fonts/outfit-600.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Outfit'; src: url('/fonts/outfit-700.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+
+/* ============================================================
+   THEME — 每站唯一要改的视觉文件
+   ============================================================
+   建站时只改这个文件，不动 global.css / 组件 / 页面。
+
+   差异红线（务必遵守，避免做成官网山寨）：
+   1. 色调方向可对齐游戏 key art（僵尸=暗红、解谜=墨绿），
+      但具体色值自己定，不照抄官网/Steam 页的品牌色精确值。
+   2. 布局用模板自带结构，不模仿官方官网首页布局。
+   3. 字体用开源通用字体，不用官网品牌字体或近似克隆。
+   4. 站名/logo/favicon 独立，明确标 unofficial。
+   5. 官方素材只做文章配图，不做 UI 装饰/背景/按钮纹理。
+
+   做法：选下方「类型预设参考」里最接近的一类，
+   把上面 @theme 块的 6 个颜色 token + 2 个字体整体替换。
+   明暗默认：恐怖/科幻类用暗黑优先（:root 直接写暗色），
+   休闲/解谜类用亮色优先（保留 :root 亮色 + dark 覆盖）。
+   ============================================================ */
+
+/* ---------- 默认：中性占位主题（建站时替换） ---------- */
+@theme {
+  --color-bg: #080d12;
+  --color-surface: #101a21;
+  --color-surface-soft: #17262d;
+  --color-text: #e7f1f2;
+  --color-muted: #9bb1b5;
+  --color-border: #29414a;
+  --color-primary: #55d6d0;
+  --color-primary-strong: #8ce9e3;
+  --color-accent: #f0b35b;
+  --font-display: Outfit, ui-sans-serif, system-ui, sans-serif;
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #080d12;
+  --color-surface: #101a21;
+  --color-surface-soft: #17262d;
+  --color-text: #e7f1f2;
+  --color-muted: #9bb1b5;
+  --color-border: #29414a;
+  --color-primary: #55d6d0;
+  --color-primary-strong: #8ce9e3;
+  --color-accent: #f0b35b;
+}
+
+/* 背景光晕：颜色引用主题变量，随主题自动切换 */
+body {
+  background:
+    radial-gradient(circle at 85% 5%, color-mix(in srgb, var(--color-primary) 12%, transparent), transparent 28rem),
+    radial-gradient(circle at 7% 70%, color-mix(in srgb, var(--color-accent) 7%, transparent), transparent 30rem),
+    var(--color-bg);
+}
+
+/* ============================================================
+   类型预设参考（只作方向提示，色值请自己定，勿整段照抄官网）
+   ------------------------------------------------------------
+   [僵尸/恐怖/末日 FPS]
+     暗黑优先。血锈红 + 工业灰 + 橄榄绿点缀。
+     色向：primary 暗红、accent 灰绿/锈橙、surface 深炭灰。
+     字体：display condensed 无衬线（Oswald / Bebas Neue），body Inter。
+     背景：深色渐变 + CSS 噪点/混凝土质感。
+
+   [点触解谜/文艺悬疑]
+     亮色优先。墨绿 + 米白 + 琥珀点缀。
+     色向：primary 深青绿、accent 琥珀、surface 米白。
+     字体：display Georgia serif，body Inter。
+     背景：暖色径向渐变。
+
+   [卡通/休闲/建造]
+     亮色优先。高饱和 + 圆角。
+     色向：primary 暖橙/明蓝、accent 亮黄绿。
+     字体：display 圆体（Baloo / Fredoka），body 圆体无衬线。
+
+   [科幻/赛博]
+     暗黑优先。霓虹 + 深蓝紫。
+     色向：primary 电青/品红、accent 霓虹绿，surface 深蓝黑。
+     字体：display 几何无衬线（Rajdhani / Orbitron），body Inter。
+
+   [奇幻/中世纪]
+     亮色优先。羊皮纸 + 棕金。
+     色向：primary 深棕、accent 古铜金、surface 羊皮米。
+     字体：display 衬线（Cinzel / Playfair），body 衬线。
+   ============================================================ */

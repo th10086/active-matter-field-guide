@@ -1,0 +1,68 @@
+{
+  "siteName": "Active Matter Field Guide",
+  "shortName": "AM Field Guide",
+  "siteUrl": "https://activematter.best",
+  "gameName": "Active Matter",
+  "tagline": "Source-checked guides for raids, maps and anomalies",
+  "steamUrl": "https://store.steampowered.com/app/2887580/Active_Matter/",
+  "demoUrl": "",
+  "officialUrl": "https://activematter.game/en/",
+  "communityUrl": "https://steamcommunity.com/app/2887580/",
+  "developer": "Matter Team",
+  "publisher": "Gaijin Network Ltd",
+  "releaseDate": "2026-09-15",
+  "steamPlatforms": "Windows, Linux",
+  "genre": "Extraction shooter",
+  "achievements": 38,
+  "languages": 7,
+  "verifiedDate": "September 16, 2026",
+  "logoMark": "AM",
+  "themeColor": "#55d6d0",
+  "gaId": "",
+  "contactEmail": "",
+  "nav": [
+    {
+      "label": "Getting Started",
+      "children": [
+        { "label": "Beginner Guide", "href": "/beginner-guide/" },
+        { "label": "How Raids Work", "href": "/how-raids-work/" },
+        { "label": "PvE Mode", "href": "/pve-mode/" },
+        { "label": "Raid Modes", "href": "/raid-modes/" },
+        { "label": "Solo and Co-op", "href": "/solo-coop/" }
+      ]
+    },
+    { "label": "Maps", "children": [
+      { "label": "Maps Overview", "href": "/maps-overview/" },
+      { "label": "Dalniy Island", "href": "/dalniy-island/" },
+      { "label": "Park", "href": "/park/" },
+      { "label": "Gigastructure", "href": "/gigastructure/" },
+      { "label": "Downtown", "href": "/downtown/" }
+    ] },
+    { "label": "Systems", "children": [
+      { "label": "Workshop", "href": "/workshop/" },
+      { "label": "Harmonization", "href": "/harmonization/" },
+      { "label": "Crossplay", "href": "/crossplay/" }
+    ] },
+    { "label": "Enemies", "children": [
+      { "label": "Enemies and Anomalies", "href": "/enemies/" },
+      { "label": "Flowermen", "href": "/flowermen/" },
+      { "label": "Creature Field Guide", "href": "/creatures/" },
+      { "label": "Anomalies", "href": "/anomalies/" }
+    ] },
+    { "label": "Updates", "children": [
+      { "label": "Latest Patch", "href": "/latest-patch/" },
+      { "label": "Release Launch", "href": "/release-launch/" },
+      { "label": "Gigastructure", "href": "/gigastructure-update/" },
+      { "label": "250 Shades of Liberty", "href": "/250-shades/" },
+      { "label": "Fire Walk", "href": "/fire-walk/" }
+    ] },
+    { "label": "Game Info", "children": [
+      { "label": "Release and Platforms", "href": "/release-platforms/" },
+      { "label": "Editions and Price", "href": "/editions-price/" },
+      { "label": "System Requirements", "href": "/system-requirements/" },
+      { "label": "Linux and Steam Deck", "href": "/linux-steam-deck/" },
+      { "label": "Languages and Controls", "href": "/languages-controls/" },
+      { "label": "FAQ", "href": "/faq/" }
+    ] }
+  ]
+}

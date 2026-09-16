@@ -1,0 +1,16 @@
+---
+import TrustPage from '../components/TrustPage.astro';
+import site from '../data/site.json';
+---
+<TrustPage title="Unofficial Site Disclaimer" description="The affiliation, trademark, accuracy and spoiler disclaimer for this independent guide.">
+  <h2>No official affiliation</h2>
+  <p>{site.siteName} is an independent, unofficial guide website. It is not affiliated with, endorsed by or sponsored by {site.developer}, {site.publisher} or Valve.</p>
+  <h2>Names and trademarks</h2>
+  <p>{site.gameName}, {site.developer} and related names and trademarks belong to their respective owners. Steam is a trademark of Valve Corporation. Their use here identifies the game and official services being discussed.</p>
+  <h2>Accuracy and updates</h2>
+  <p>Patches may change game behavior, achievements, prices or platform availability. Verification dates are provided where practical, and current official pages take priority over older guide information.</p>
+  <h2>Spoilers</h2>
+  <p>Walkthrough pages necessarily reveal gameplay steps and story actions. Spoiler notices and progressive hints are provided where possible, but readers should assume a guide page contains spoilers.</p>
+  <h2>No downloads or keys</h2>
+  <p>This site does not distribute game files, cracks, activation keys, torrents or unauthorized downloads.</p>
+</TrustPage>

@@ -1,0 +1,16 @@
+---
+import TrustPage from '../components/TrustPage.astro';
+import site from '../data/site.json';
+---
+<TrustPage title="Contact" description={`Contact information and the correction policy for ${site.siteName}.`}>
+  <h2>Contact channel</h2>
+  {site.contactEmail ? <p>Send corrections or questions to <a class="font-bold text-primary" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p> : <p>The correction channel will be published when the site owner configures it. Until then, use the source links on each page to reproduce a questionable claim.</p>}
+  <p>Please do not contact {site.developer}, Valve or Steam about this independent website. They do not operate it.</p>
+  <h2>What to include in a correction</h2>
+  <ul>
+    <li>The URL of the page with the problem.</li>
+    <li>The exact sentence or guide step that may be wrong.</li>
+    <li>The game platform and build or patch date, when known.</li>
+    <li>A link to an official notice or a reproducible recording.</li>
+  </ul>
+</TrustPage>
