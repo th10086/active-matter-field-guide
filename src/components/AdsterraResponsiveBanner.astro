@@ -1,0 +1,33 @@
+<div class="adsterra-slot adsterra-banner-slot" data-adsterra-responsive-banner>
+  <span class="adsterra-label">Advertisement</span>
+  <div class="adsterra-banner-target"></div>
+</div>
+
+<script is:inline>
+  (() => {
+    const slot = document.currentScript?.previousElementSibling;
+    const target = slot?.querySelector('.adsterra-banner-target');
+    if (!target || target.dataset.loaded) return;
+
+    const mobile = window.matchMedia('(max-width: 767px)').matches;
+    const ad = mobile
+      ? { key: 'dcc1c99d6fc09fe519ddfccb3a37ad00', width: 320, height: 50, src: 'https://endedstrung.com/dcc1c99d6fc09fe519ddfccb3a37ad00/invoke.js' }
+      : { key: 'f473702073a0a1fa2ea25c0d5f69a7e1', width: 728, height: 90, src: 'https://endedstrung.com/f473702073a0a1fa2ea25c0d5f69a7e1/invoke.js' };
+
+    window.atOptions = { key: ad.key, format: 'iframe', height: ad.height, width: ad.width, params: {} };
+    const script = document.createElement('script');
+    script.async = true;
+    script.dataset.cfasync = 'false';
+    script.src = ad.src;
+    target.dataset.loaded = 'true';
+    target.appendChild(script);
+  })();
+</script>
+
+<style>
+  .adsterra-slot { width: 100%; margin: 1.25rem auto; }
+  .adsterra-label { display: block; margin-bottom: .35rem; color: var(--color-muted, #9aa8b5); font-size: .68rem; letter-spacing: .12em; text-align: center; text-transform: uppercase; }
+  .adsterra-banner-slot { max-width: 728px; min-height: 0; }
+  .adsterra-banner-target { display: flex; min-height: 0; justify-content: center; overflow: hidden; }
+  @media (max-width: 767px) { .adsterra-banner-slot { max-width: 320px; } }
+</style>

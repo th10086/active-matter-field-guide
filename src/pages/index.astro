@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import OfficialVideo from '../components/OfficialVideo.astro';
+import AdsterraResponsiveBanner from '../components/AdsterraResponsiveBanner.astro';
+import AdsterraNativeBanner from '../components/AdsterraNativeBanner.astro';
 import site from '../data/site.json';
 import home from '../data/home.json';
 
@@ -34,6 +36,8 @@ const jsonLd = [
       </aside>
     )}
   </section>
+
+  <div class="shell"><AdsterraResponsiveBanner /></div>
 
   <section class="home-facts" aria-label="Verified game facts">
     <div><strong>Sep 15, 2026</strong><span>Steam launch date</span></div>
@@ -72,6 +76,8 @@ const jsonLd = [
       </div>
     </section>
   )}
+
+  <div class="shell"><AdsterraNativeBanner /></div>
 
   {compare?.title && (
     <section class="shell py-16">
