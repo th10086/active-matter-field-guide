@@ -18,6 +18,8 @@ sources:
 related:
   - title: "Flowermen guide"
     href: "/flowermen/"
+  - title: "Dendroids guide"
+    href: "/dendroids/"
   - title: "Creature field guide"
     href: "/creatures/"
 ---

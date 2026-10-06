@@ -18,6 +18,8 @@ sources:
 related:
   - title: "Enemies and anomalies"
     href: "/enemies/"
+  - title: "Dendroids guide"
+    href: "/dendroids/"
   - title: "Anomalies guide"
     href: "/anomalies/"
 ---
